@@ -12,7 +12,7 @@ y = data.loc[:, 0]
 svc = SVC(C=100000, random_state=241, kernel='linear')
 svc.fit(X, y)
 
-# находим номера объектов, являющихся опорными, и записываем в текствой файл
+# находим номера объектов, являющихся опорными, записываем в текствой файл
 with open('hw3.1.txt', 'w') as f:
        for i in range(len(svc.support_)):
            f.write(str(svc.support_[i] + 1))
