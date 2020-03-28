@@ -9,8 +9,8 @@ from sklearn.metrics import roc_auc_score
 from sklearn.metrics import precision_recall_curve
 
 # импорт даннных
-data1 = pd.read_csv("/Users/nikitabaramiya/Desktop/ML/classification.csv", header=0)
-data2 = pd.read_csv("/Users/nikitabaramiya/Desktop/ML/scores.csv", header=0)
+data1 = pd.read_csv("data/classification.csv", header=0)
+data2 = pd.read_csv("data/scores.csv", header=0)
 
 # функция для определния характеристик confusion matrix
 def function(a, b):
