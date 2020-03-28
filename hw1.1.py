@@ -2,7 +2,7 @@ import numpy as np
 import pandas as pd
 
 # импотрт данных
-data = pd.read_csv("/Users/nikitabaramiya/Desktop/ML/titanic.csv", header=0)
+data = pd.read_csv("data/titanic.csv", header=0)
 
 # Считаем:
 # размеченных мужчин и женщин
