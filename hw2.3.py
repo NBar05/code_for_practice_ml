@@ -5,8 +5,8 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.metrics import accuracy_score
 
 # импортируем данные и преобразуем их в матричный формат, попутно деля на X и y
-test = pd.read_csv("/Users/nikitabaramiya/Desktop/ML/perceptron-test.csv", header=None)
-train = pd.read_csv("/Users/nikitabaramiya/Desktop/ML/perceptron-train.csv", header=None)
+test = pd.read_csv("data/perceptron-test.csv", header=None)
+train = pd.read_csv("data/perceptron-train.csv", header=None)
 
 X_train = np.array(train.loc[:, 1:])
 y_train = np.array(train.loc[:, 0])
