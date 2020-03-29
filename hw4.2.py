@@ -3,8 +3,8 @@ import pandas as pd
 from sklearn.decomposition import PCA
 
 # импорт данных
-close_prices = pd.read_csv("/Users/nikitabaramiya/Desktop/ML/close_prices.csv", header=0)
-djia_index = pd.read_csv("/Users/nikitabaramiya/Desktop/ML/djia_index.csv", header=0)
+close_prices = pd.read_csv("data/close_prices.csv", header=0)
+djia_index = pd.read_csv("data/djia_index.csv", header=0)
 
 # применяем метод главных компонент
 pca = PCA(n_components=10)
