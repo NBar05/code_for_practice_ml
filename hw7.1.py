@@ -15,10 +15,10 @@ from sklearn.linear_model import LogisticRegression
 main_start_time = datetime.datetime.now()
 
 # извлекаю данные
-Xy = pd.read_csv('/Users/nikitabaramiya/Desktop/ML/data7/features.csv', index_col='match_id')
+Xy = pd.read_csv('data/data7/features.csv', index_col='match_id')
 y_train = Xy.radiant_win
 
-X_test = pd.read_csv('/Users/nikitabaramiya/Desktop/ML/data7/features_test.csv', index_col='match_id')
+X_test = pd.read_csv('data/data7/features_test.csv', index_col='match_id')
 
 # удаляем лишние признаки (связаны с итогами матчами)
 features = ["duration", "radiant_win", "tower_status_radiant", "tower_status_dire", "barracks_status_radiant", "barracks_status_dire"]
@@ -123,7 +123,7 @@ print(round(pd.DataFrame(y_pred_proba)[0].max(), 3), round(pd.DataFrame(y_pred_p
 
 # создаём файл с предсказаниями
 data = {"match_id": np.array(X_test.index), "radiant_win": y_pred_proba[:, 0]}
-pd.DataFrame(data).to_csv('/Users/nikitabaramiya/Desktop/ML/data7/result_data.csv', encoding='utf-8', index=False)
+pd.DataFrame(data).to_csv('data/data7/result_data.csv', encoding='utf-8', index=False)
 
 # итоговое время
 print('Total time: ' + str(datetime.datetime.now() - main_start_time))
