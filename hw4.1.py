@@ -6,8 +6,8 @@ from sklearn.feature_extraction import DictVectorizer
 from scipy.sparse import hstack
 
 # импорт данных
-data_train = pd.read_csv("/Users/nikitabaramiya/Desktop/ML/salary-train.csv", header=0)
-data_test = pd.read_csv("/Users/nikitabaramiya/Desktop/ML/salary-test-mini.csv", header=0)
+data_train = pd.read_csv("data/salary-train.csv", header=0)
+data_test = pd.read_csv("data/salary-test-mini.csv", header=0)
 
 X_train = data_train.iloc[:, 0:3]
 y_train = data_train.iloc[:, -1]
