@@ -7,7 +7,7 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import log_loss
 
 # импорт данных, разбиение на обучающие и тестовые выборки
-data = pd.read_csv("/Users/nikitabaramiya/Desktop/ML/gbm-data.csv", header=0)
+data = pd.read_csv("data/gbm-data.csv", header=0)
 
 X = data.iloc[:, 1:]
 y = data.iloc[:, 0]
